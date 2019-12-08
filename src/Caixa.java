@@ -1,6 +1,6 @@
 import java.util.concurrent.Semaphore;
 
-public class Caixa extends Thread{
+public class Caixa implements Runnable{
 
     String nombre;
     Client cliente;
@@ -35,9 +35,9 @@ public class Caixa extends Thread{
 //                System.out.println("Procesado el producto " + (i + 1) +
 //                        " ->Tiempo: " + (System.currentTimeMillis() - timeStamp) / 1000 + "seg");
             }
-            System.out.println("La cajera " + this.nombre + " HA TERMINADO DE PROCESAR " +
-                    client.getNombre() + " EN EL TIEMPO: " +
-                    (System.currentTimeMillis() - timeStamp) / 1000 + "seg");
+//            System.out.println("La cajera " + this.nombre + " HA TERMINADO DE PROCESAR " +
+//                    client.getNombre() + " EN EL TIEMPO: " +
+//                    (System.currentTimeMillis() - timeStamp) / 1000 + "seg");
 
         } catch (InterruptedException e) {
             e.printStackTrace();
